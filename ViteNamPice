@@ -1,0 +1,26 @@
+spawn(function()
+    while wait() do 
+        pcall(function()
+            if _G.Raids then
+
+
+local args = {
+    [1] = Vector3.new(-157.5414276123047, 87752.125, 840.7996215820312)
+}
+
+game:GetService("Players").LocalPlayer.Character.Rumble.X.RemoteEvent:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept1.RemoteEvent:FireServer()
+
+
+ end
+        end)
+    end
+end)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))() -- อันนี้เป็นUI
+local Window = Library.CreateLib("KuyYedHee", "Synapse") -- อันนี้เป็นชื่อui
+local Tab = Window:NewTab("Main")-- อันนี้เป็นชื่อของTab
+local Section = Tab:NewSection("FramKaidou") -- อันนีเป็นชื่อของSection 
+Section:NewToggle("Rumble skill x", "", function(v) -- อันนี้เป็น NewToggle
+    _G.Raids = v --อันนี้เป็นตัวแปร
+end)
